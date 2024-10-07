@@ -33,6 +33,6 @@ public class PostList {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getVersion() {
-        return "Raven Jakarta version 1.1";
+        return "Raven Jakarta version 1.2";
     }
 }

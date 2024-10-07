@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>us.deans.raven</groupId>
-	<artifactId>rvn-Jakarta</artifactId>
+	<artifactId>Raven-Jakarta-JAXRS</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>rvn-Jakarta</name>
+	<name>Raven-Jakarta-JAXRS</name>
 	<description>
 		Jakarta project for Raven web service
 	</description>
@@ -46,7 +46,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>rvn-Jakarta</finalName>
+		<finalName>Raven-JAXRS</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

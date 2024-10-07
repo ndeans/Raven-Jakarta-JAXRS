@@ -19,16 +19,13 @@ public class Upload {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response setPostList(RvnImport upload) {
-        String msg = "just got this... " + upload.printJob();
-        logger.info("");
-        logger.debug(msg);
+        String msg = "Receiving import object... { " + upload.printJob() + " post list: " + upload.getPostCount() + " records }";
+        logger.info(msg);  // logger.debug(msg);
 
         try {
             Processor processor = new OppProcessor_02(upload);
             processor.log();
-            processor.persist();
-            // msg = "inserting " + postList.size() + " post records...";
-            logger.info(msg);
+            processor.persist();  // activating separately affords a chance to manipulate first)
         } catch (Exception ex) {
             logger.error(ex.toString());
             logger.error(Arrays.toString(ex.getStackTrace()));
@@ -39,6 +36,6 @@ public class Upload {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getVersion() {
-        return "Raven Jakarta version 1.1";
+        return "Raven Jakarta version 1.2";
     }
 }
