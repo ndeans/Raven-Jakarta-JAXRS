@@ -24,7 +24,6 @@ public class Upload {
 
         try {
             Processor processor = new OppProcessor(upload);
-            // processor.upload(upload);
             processor.persist();
         } catch (Exception ex) {
             logger.error(ex.toString());
